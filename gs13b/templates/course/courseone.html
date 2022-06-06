@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: black;
+            color: seashell;
+        }
+    </style>
+    <title>Djangot</title>
+</head>
+<body>
+
+    <h2>Example OPerators and</h2>
+
+    {% if nm and st  %}
+    <h3>{{st}} Seats are avaliable for {{nm}} Course</h3>
+    {% endif %}
+
+    <h2>Example OPerators  or</h2>
+
+    {% if nm or st  %}
+    <h3>{{st}} Seats are avaliable for {{nm}} Course</h3>
+    {% endif %}
+    <h2>Example OPerators</h2>
+
+    {% if not st  %}
+    <h3>{{st}} Seats are not avaliable for {{nm}} Course</h3>
+    {% endif %}
+
+    <h2>Condition </h2>
+    {% if nm  == 'Django'  %}
+    <h3>Hello {{nm}} </h3>
+    {% endif %}
+    {% if nm  == 'Django' and st == 5  %}
+    <h3>{{st}} seats are avaliable for {{nm}} course </h3>
+    {% endif %}
+
+    {% if not st  %}
+    <h3>{{st}} Seats are not avaliable for {{nm}} Course</h3>
+    {% endif %}
+
+    {% if nm  == 'Django' or st == 5  %}
+    <h3>{{st}} seats are avaliable for {{nm}} course </h3>
+    {% endif %}
+
+    <h3>Filter</h3>
+    {% if nm|length >= 4 %}
+    <h2>Hello {{nm}}</h2>
+    {% endif %}
+<h3>If Ealse</h3>
+
+{% if nm %}
+<h2>Hello {{nm}}</h2>
+{% else %}
+<h2>No course avaliable</h2>
+{% endif %}
+
+
+<h3> elif </h3>
+{%  if nm  %}
+<h3> hello {{nm}}</h3>
+{% elif st %}
+<h3> seats {{st}}</h3>
+{% else %}
+<h3>Seats is not avaliable</h3>
+{% endif %}
+
+
+
+</body>
+</html>
